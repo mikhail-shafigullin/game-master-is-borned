@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdrkq6kdn8dtr"]
+
+[ext_resource type="Script" uid="uid://douwa01wtb686" path="res://code/screens/MainScreen.gd" id="1_6mwta"]
+[ext_resource type="Texture2D" uid="uid://bflk6mkjuk5fv" path="res://assets/sprites/MainScreen.png" id="1_mrqkd"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_6mwta")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mrqkd")
+centered = false
