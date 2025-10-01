@@ -2,12 +2,18 @@ extends Node
 
 var _client: GoogleAnalyticsClient = null
 const CLIENT_ID_FILE = "user://analytics_client_id.txt"
+var envVars = ConfigFile.new()
 
 func _ready() -> void:
 	var measurement_id = ProjectSettings.get_setting("google_analytics/measurement_id")
 	var api_secret = ProjectSettings.get_setting("google_analytics/api_secret")
+	if measurement_id == null or api_secret == null or measurement_id.is_empty() or api_secret.is_empty():
+		envVars.load("res://.env");
+		measurement_id = envVars.get_value("GA", "GA.measurement_id");
+		measurement_id = envVars.get_value("GA", "GA.api_secret");
+
 	var client_id = _get_or_create_client_id()
-	
+
 	if measurement_id == null or api_secret == null or measurement_id.is_empty() or api_secret.is_empty():
 		push_warning("[GA] Google Analytics settings are not configured. Events will not be tracked.")
 		return

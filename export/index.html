@@ -3,24 +3,24 @@
   <head>
     <title>My Template</title>
     <meta charset="UTF-8" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-EMBE58ZS6G"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-EMBE58ZS6G", {
+        send_page_view: true,
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+      });
+    </script>
   </head>
-  <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-    gtag("config", "G-XXXXXXXXXX", {
-      send_page_view: false,
-      allow_google_signals: false,
-      allow_ad_personalization_signals: false,
-    });
-  </script>
 
   <body>
     <canvas id="canvas"></canvas>
