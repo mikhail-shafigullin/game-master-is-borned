@@ -15,6 +15,15 @@ run/main_scene="uid://bdrkq6kdn8dtr"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+MadTalkGlobals="*res://addons/madtalk/runtime/MadTalkGlobals.tscn"
+Analytics="*res://addons/google_analytics/analytics_singleton.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/google_analytics/plugin.cfg", "res://addons/madtalk/plugin.cfg")
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
