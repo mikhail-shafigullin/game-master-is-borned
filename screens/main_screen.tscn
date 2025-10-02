@@ -1,11 +1,36 @@
-[gd_scene load_steps=3 format=3 uid="uid://bdrkq6kdn8dtr"]
+[gd_scene load_steps=7 format=3 uid="uid://bdrkq6kdn8dtr"]
 
 [ext_resource type="Script" uid="uid://douwa01wtb686" path="res://code/screens/MainScreen.gd" id="1_6mwta"]
-[ext_resource type="Texture2D" uid="uid://bflk6mkjuk5fv" path="res://assets/sprites/MainScreen.png" id="1_mrqkd"]
+[ext_resource type="Texture2D" uid="uid://d3wwkmukdkq2" path="res://assets/sprites/CommonDesk.png" id="2_6mwta"]
+[ext_resource type="Texture2D" uid="uid://hrcmerh0b22r" path="res://assets/sprites/GreenPlayer.png" id="2_yqnpn"]
+[ext_resource type="Texture2D" uid="uid://xv10nq0poms" path="res://assets/sprites/BluePlayer.png" id="3_e3ohh"]
+[ext_resource type="Texture2D" uid="uid://ccs7n2fqx3kna" path="res://assets/sprites/RedPlayer.png" id="4_gcspd"]
+[ext_resource type="Texture2D" uid="uid://b7chm87jq6o8v" path="res://assets/sprites/GameMaster.png" id="6_1ermf"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_6mwta")
 
+[node name="GreenPlayer" type="Sprite2D" parent="."]
+position = Vector2(500, 243)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_yqnpn")
+
+[node name="BluePlayer" type="Sprite2D" parent="."]
+position = Vector2(353, 312)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_e3ohh")
+
+[node name="RedPlayer" type="Sprite2D" parent="."]
+position = Vector2(203.5, 305)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_gcspd")
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_mrqkd")
-centered = false
+position = Vector2(590, 446)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_6mwta")
+
+[node name="GameMaster" type="Sprite2D" parent="."]
+position = Vector2(906, 465)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_1ermf")
