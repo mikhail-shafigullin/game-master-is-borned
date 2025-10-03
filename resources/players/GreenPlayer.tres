@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PlayerData" load_steps=3 format=3 uid="uid://utd6jl0a2gau"]
+
+[ext_resource type="Script" uid="uid://7y4nq25iyege" path="res://code/resources/PlayerData.gd" id="1_0dsfp"]
+[ext_resource type="Texture2D" uid="uid://hrcmerh0b22r" path="res://assets/sprites/GreenPlayer.png" id="2_vblxk"]
+
+[resource]
+script = ExtResource("1_0dsfp")
+texture = ExtResource("2_vblxk")
+metadata/_custom_type_script = "uid://7y4nq25iyege"

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://u0385dbiloen"]
+
+[ext_resource type="Texture2D" uid="uid://d3wwkmukdkq2" path="res://assets/sprites/CommonDesk.png" id="1_0iqh6"]
+[ext_resource type="Script" uid="uid://bmhhdii43grci" path="res://code/views/DeskView.gd" id="2_em11a"]
+
+[node name="Desk" type="Node2D"]
+script = ExtResource("2_em11a")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_0iqh6")

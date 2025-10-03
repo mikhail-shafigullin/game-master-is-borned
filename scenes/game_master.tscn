@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmhlkpeqjihus"]
+
+[ext_resource type="Texture2D" uid="uid://b7chm87jq6o8v" path="res://assets/sprites/GameMaster.png" id="1_5dhe3"]
+[ext_resource type="Script" uid="uid://b10aswya3hd6l" path="res://code/views/GameMasterView.gd" id="2_g0w00"]
+
+[node name="GameMaster" type="Node2D"]
+script = ExtResource("2_g0w00")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_5dhe3")
