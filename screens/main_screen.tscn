@@ -1,30 +1,44 @@
-[gd_scene load_steps=8 format=3 uid="uid://bdrkq6kdn8dtr"]
+[gd_scene load_steps=9 format=3 uid="uid://bdrkq6kdn8dtr"]
 
-[ext_resource type="Script" uid="uid://douwa01wtb686" path="res://code/screens/MainScreen.gd" id="1_6mwta"]
 [ext_resource type="Resource" uid="uid://utd6jl0a2gau" path="res://resources/players/GreenPlayer.tres" id="4_gcspd"]
 [ext_resource type="PackedScene" uid="uid://df5yeck7boidv" path="res://scenes/game_player.tscn" id="4_yqnpn"]
 [ext_resource type="PackedScene" uid="uid://u0385dbiloen" path="res://scenes/desk.tscn" id="5_e3ohh"]
 [ext_resource type="Resource" uid="uid://6nkyoiq4g3kn" path="res://resources/players/RedPlayer.tres" id="5_gcspd"]
 [ext_resource type="PackedScene" uid="uid://dmhlkpeqjihus" path="res://scenes/game_master.tscn" id="6_gcspd"]
 [ext_resource type="Resource" uid="uid://7pu7yb4i50u4" path="res://resources/players/BluePlayer.tres" id="7_e3ohh"]
+[ext_resource type="PackedScene" uid="uid://bsbrtost1e82r" path="res://scenes/ui/main_screen_ui.tscn" id="8_1ermf"]
+[ext_resource type="Script" uid="uid://c3mwt52y8o7lu" path="res://code/controllers/GameProcessController.gd" id="8_gcspd"]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_6mwta")
 
-[node name="GreenPlayer" parent="." instance=ExtResource("4_yqnpn")]
-position = Vector2(485, 239)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MainScreenUi" parent="CanvasLayer" instance=ExtResource("8_1ermf")]
+
+[node name="Views" type="Node2D" parent="."]
+
+[node name="Players" type="Node2D" parent="Views"]
+position = Vector2(338, 306)
+
+[node name="GreenPlayer" parent="Views/Players" instance=ExtResource("4_yqnpn")]
+position = Vector2(174, -48)
 player_data = ExtResource("4_gcspd")
 
-[node name="BluePlayer" parent="." instance=ExtResource("4_yqnpn")]
-position = Vector2(338, 305)
+[node name="BluePlayer" parent="Views/Players" instance=ExtResource("4_yqnpn")]
+position = Vector2(25, 23)
 player_data = ExtResource("7_e3ohh")
 
-[node name="RedPlayer" parent="." instance=ExtResource("4_yqnpn")]
-position = Vector2(193, 329)
+[node name="RedPlayer" parent="Views/Players" instance=ExtResource("4_yqnpn")]
+position = Vector2(-116, 35)
 player_data = ExtResource("5_gcspd")
 
-[node name="Desk" parent="." instance=ExtResource("5_e3ohh")]
+[node name="Desk" parent="Views" instance=ExtResource("5_e3ohh")]
 position = Vector2(590, 446)
 
-[node name="GameMaster" parent="." instance=ExtResource("6_gcspd")]
-position = Vector2(906, 465)
+[node name="GameMaster" parent="Views" instance=ExtResource("6_gcspd")]
+position = Vector2(898, 489)
+
+[node name="Controllers" type="Node" parent="."]
+
+[node name="GameProcessController" type="Node" parent="Controllers"]
+script = ExtResource("8_gcspd")

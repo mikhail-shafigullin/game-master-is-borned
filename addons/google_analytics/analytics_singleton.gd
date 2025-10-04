@@ -10,7 +10,7 @@ func _ready() -> void:
 	if measurement_id == null or api_secret == null or measurement_id.is_empty() or api_secret.is_empty():
 		envVars.load("res://.env");
 		measurement_id = envVars.get_value("GA", "GA.measurement_id");
-		measurement_id = envVars.get_value("GA", "GA.api_secret");
+		api_secret = envVars.get_value("GA", "GA.api_secret");
 
 	var client_id = _get_or_create_client_id()
 
